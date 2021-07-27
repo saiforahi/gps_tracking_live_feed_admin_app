@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+.footer-images{
+    height: 245.51px;
+}
+.footer-gap{
+    padding-top: 100px;
+}
+.footer-header{
+    font-family: 'Archivo Narrow', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 60px;
+line-height: 81px;
+text-align: center;
+color: #13110C;
+}
+.footer-minor-details{
+    font-family: 'Archivo Narrow', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+color: #13110C;
+}
+.copyright-info{
+font-family: 'Archivo Narrow', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+color: #13110C;
+margin-top: 80px;
+text-align: center;
+}
+
+/**_____MEDIA QUERY________*/
+@media all and (max-width:992px){
+    .footer-header{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .footer-images{
+        height: 180px;
+    }
+    .footer-minor-details{
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .copyright-info{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .footer-gap{
+        padding-top: 50px;
+    }
+}
+@media all and (max-width:768px){
+    .mobile-view{
+        display: none !important;
+    }
+}
