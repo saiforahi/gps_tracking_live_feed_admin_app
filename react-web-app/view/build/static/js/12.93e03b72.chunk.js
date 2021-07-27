@@ -1,2 +1,0 @@
-(this.webpackJsonpjahaji=this.webpackJsonpjahaji||[]).push([[12],{780:function(e,t,c){"use strict";c.r(t);var i=c(716),n=(c(0),c(16));t.default=function(){return Object(n.jsx)(n.Fragment,{children:Object(n.jsx)(i.i,{children:Object(n.jsx)(i.C,{children:"Map"})})})}}}]);
-//# sourceMappingURL=12.93e03b72.chunk.js.map

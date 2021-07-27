@@ -14,3 +14,15 @@
 .c-sidebar-brand:hover{
     color: white !important;
 }
+.c-sidebar{
+    background: #052349 !important;
+}
+
+.c-sidebar .c-sidebar-nav-link:hover, .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
+    color: #fff;
+    background: #b93838;
+}
+.c-sidebar .c-sidebar-nav-link.c-active, .c-sidebar .c-active.c-sidebar-nav-dropdown-toggle {
+    color: #fff;
+    background: #b93838;
+}

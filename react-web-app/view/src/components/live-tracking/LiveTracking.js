@@ -1,14 +1,28 @@
-import { CContainer,CRow } from '@coreui/react'
+import { CContainer, CRow } from '@coreui/react'
 import React from 'react'
-
-const LiveTracking =()=>{
-    return(
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css';
+import './leafletStyles.css'
+const LiveTracking = () => {
+    return (
         <>
-        <CContainer>
-            <CRow>
-                Map
-            </CRow>
-        </CContainer>
+            <CContainer>
+                <CRow>
+                    <div>
+                    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                        <TileLayer
+                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={[51.505, -0.09]}>
+                            <Popup>
+                                A pretty CSS3 popup. <br /> Easily customizable.
+                            </Popup>
+                        </Marker>
+                    </MapContainer>
+                    </div>
+                </CRow>
+            </CContainer>
         </>
     )
 }
