@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const status = 'prod'
-export const API_URL = status === 'prod' ? 'http://103.123.8.52:8075/api/' : 'http://localhost:8000/'
+export const API_URL = status === 'prod' ? 'http://103.123.8.52:8333/' : 'http://localhost:8000/'
 export const TOKEN = "access_token"
 export const BASE_URL = 'http://103.123.8.52:8075'
 export const credentials = {
