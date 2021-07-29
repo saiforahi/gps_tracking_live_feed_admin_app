@@ -18,7 +18,7 @@ const LiveTracking = () => {
                 setDevices(res.data.data)
                 console.log('lat : ',parseFloat(res.data.data[0].lat))
             })
-          }, 1000);
+          }, 30000);
         return () => clearInterval(interval);
     },[])
     return (
@@ -32,9 +32,9 @@ const LiveTracking = () => {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         {devices.length>0 && Array.from(devices).map((device,idx)=>
-                            <Marker id={idx} position={[Number(device.lat),Number(device.lng)]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
+                            <Marker id={idx} position={[Number(device.lat),Number(device.lng)]} icon={new Icon({iconUrl: device.sos == 'True'?'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png':markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
                                 <Popup>
-                                    Device ID : {device.device__device_id}<br/>Battery: {device.battery}. <br /> signal_strength1 : {device.signal_strength1} <br/> signal_strength2: {device.signal_strength2}<br/> speed : {device.speed}
+                                    Lat : {device.lat}<br/>Lng : {device.lng}<br/>Device ID : {device.device__device_id}<br/>Battery: {device.battery}. <br /> signal_strength1 : {device.signal_strength1} <br/> signal_strength2: {device.signal_strength2}<br/> speed : {device.speed} <br/> sos : {device.sos} <br/> sim_no : {device.sim_no} <br/> locked_satelite : {device.locked_satellite} <br/> heading : {device.heading}
                                 </Popup>
                             </Marker>
                         )}
